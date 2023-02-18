@@ -16,8 +16,8 @@
         <div class="content">
             <!-- First navbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light col-sm-12 col-md-6 mx-auto">
-                <div class="container-fluid p-0">
-                    <p class="navbar gap-1 p-2" h1><i class="fab fa-instagram"></i>Instagram</p>
+                <div class="container-fluid p-0 bg-light">
+                    <p class="navbar gap-1 p-2"><i class="fab fa-instagram"></i><strong>Instagram</strong></p>
                     <form class="d-flex gap-2 mx-2">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -33,9 +33,9 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p class="m-0"><strong>Caption:</strong></p>
+                                        <p class="m-0 pb-2"><strong>Caption:</strong></p>
                                         <div class="form-group">
-                                            <textarea class="w-100" placeholder=" Add the caption of your post here"></textarea>
+                                            <textarea class="w-100 mb-2" placeholder=" Add the caption of your post here"></textarea>
                                         </div>
                                         <button style = "color:black;" type="button" class="btn btn-light border border-1">
                                             <i class="fa-solid fa-camera"></i>
@@ -66,95 +66,109 @@
                     </form>
                 </div>
             </nav>
-        
+            
+            <!-- Buttons to change mosaic -->
             <div class="container-fluid col-sm-12 col-md-6">
-                <!-- Buttons to change mosaic -->
                 <div class="row mb-0 bg-light" id="nav-pills">
-                    <div class="d-flex justify-content-center m-0 p-0 bg-light">
+                    <div class="d-flex justify-content-center m-0 p-0 bg-white">
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="photos-tab" data-bs-toggle="pill" data-bs-target="#photos" role="tab" aria-controls="photos" aria-selected="true"><i style = "color:black;" class="fas fa-th"></i></a>
+                                <a class="nav-link active" id="photos-tab" data-bs-toggle="pill" data-bs-target="#photos" role="tab" aria-controls="photos" aria-selected="true"><i style = "color:gray;" class="fas fa-th"></i></a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a style = "color:black;" class="nav-link" id="singles-tab" data-bs-toggle="pill" data-bs-target="#singles" role="tab" aria-controls="singles" aria-selected="false"><i style = "color:black;" class="fa-solid fa-square"></i></a>
+                                <a style = "color:black;" class="nav-link" id="singles-tab" data-bs-toggle="pill" data-bs-target="#singles" role="tab" aria-controls="singles" aria-selected="false"><i style = "color:gray;" class="fa-solid fa-square"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <!-- Styles to change icon color when it's active or not -->
+            <style>
+                .nav-pills .nav-link.active {
+                    background-color: white;
+                }
 
-            <!-- First container with the all photos without descriptions -->
-            <div class="tab-pane fade show active col-sm-12 col-md-6 mx-auto p-0" id="photos" role="tabpanel" aria-labelledby="photos-tab" style="background:white;"">
-                <div class="row">
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/7GJWuil.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/FdltG75.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/U3zPPRV.jpg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/rcD17FJ.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/1EFupTz.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/XjGrpbg.jpg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/8VaaTfP.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/se77XPK.jpg">
-                    </div>
-                    <div class="col p-1">
-                        <img class="w-100" src="https://i.imgur.com/N4wLcQu.jpg">
-                    </div>
-                </div>
-            </div>
+                .nav-pills .nav-link.active i {
+                    color: blue !important;
+                }
+            </style>
 
-            <!-- Second container with card photos-->
-            <div class="tab-pane fade col-sm-8 col-md-3 mx-auto" id="singles" role="tabpanel" aria-labelledby="singles-tab">
-                <div class="card mt-3">
-                    <div class="card-header d-flex justify-content-between">
-                        <h4 class="title">Cristiano Ronaldo</h4>
-                        <p>1/7</p>
+            <!-- Both containers -->
+            <div class="tab-content" id="pills-tabContent">
+                <!-- First container with the all photos without descriptions -->
+                <div class="tab-pane fade show active col-sm-12 col-md-6 mx-auto p-0" id="photos" role="tabpanel" aria-labelledby="photos-tab" style="background:white;"">
+                    <div class="row">
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/7GJWuil.jpg">
+                        </div>
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/FdltG75.jpg">
+                        </div>
+                        <div class="col p-1 mr-4">
+                            <img class="w-100 pr-4" src="https://i.imgur.com/U3zPPRV.jpg">
+                        </div>
                     </div>
-                    <img src="https://i.imgur.com/kGYL6gN.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title"><strong>300.000 Likes</strong></p>
-                        <p class="card-text">Cristiano Ronaldo dos Santos Aveiro GOIH ComM; born 5 February 1985) is a Portuguese professional footballer who plays as a forward for and captains both Saudi Professional League club Al Nassr and the Portugal national team. Widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards[note 3] and four European Golden Shoes, the most by a European player. He has won 32 trophies in his career, including seven league titles, five UEFA Champions Leagues, the UEFA European Championship and the UEFA Nations League. </p>
+                    <div class="row">
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/rcD17FJ.jpg">
+                        </div>
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/1EFupTz.jpg">
+                        </div>
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/XjGrpbg.jpg">
+                        </div>
                     </div>
-                </div>
-
-                <div class="card mt-3">
-                    <div class="card-header d-flex justify-content-between">
-                        <h4 class="title">Neymar</h4>
-                        <p>2/10</p>
-                    </div>
-                    <img src="https://i.imgur.com/uaM2t7f.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title"><strong>25.000 Likes</strong></p>
-                        <p class="card-text">Neymar da Silva Santos Júnior (born 5 February 1992), known as Neymar, is a Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team. A prolific goalscorer and renowned playmaker, he is regarded as one of the best players in the world, as well as one of the greatest Brazilian footballers of all time. Neymar has scored at least 100 goals for three different clubs, making him one of four players to achieve this.</p>
+                    <div class="row">
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/8VaaTfP.jpg">
+                        </div>
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/se77XPK.jpg">
+                        </div>
+                        <div class="col p-1">
+                            <img class="w-100" src="https://i.imgur.com/N4wLcQu.jpg">
+                        </div>
                     </div>
                 </div>
 
-                <div class="card mt-3 mb-3">
-                    <div class="card-header d-flex justify-content-between">
-                        <h4 class="title">Ronaldinho</h4>
-                        <p>4/15</p>
+                <!-- Second container with card photos-->
+                <div class="tab-pane fade col-sm-8 col-md-3 mx-auto" id="singles" role="tabpanel" aria-labelledby="singles-tab">
+                    <div class="card mt-3">
+                        <div class="card-header d-flex justify-content-between bg-white">
+                            <h4 class="title">Cristiano Ronaldo</h4>
+                            <p>1/7</p>
+                        </div>
+                        <img src="https://i.imgur.com/kGYL6gN.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-title"><strong>300.000 Likes</strong></p>
+                            <p class="card-text">Cristiano Ronaldo dos Santos Aveiro GOIH ComM; born 5 February 1985) is a Portuguese professional footballer who plays as a forward for and captains both Saudi Professional League club Al Nassr and the Portugal national team. Widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards[note 3] and four European Golden Shoes, the most by a European player. He has won 32 trophies in his career, including seven league titles, five UEFA Champions Leagues, the UEFA European Championship and the UEFA Nations League. </p>
+                        </div>
                     </div>
-                    <img src="https://i.imgur.com/ddBH8Yl.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title"><strong>20.000 Likes</strong></p>
-                        <p class="card-text">Ronaldo de Assis Moreira (born 21 March 1980), commonly known as Ronaldinho Gaúcho or simply Ronaldinho, is a Brazilian retired professional footballer who played mostly as an attacking midfielder, but was also deployed as a winger. Widely regarded as one of the greatest players of all time, Ronaldinho won two FIFA World Player of the Year awards and a Ballon d'Or. A global icon of the sport, he was renowned for his technical skills, creativity, dribbling ability and accuracy from free-kicks, his use of tricks, feints, no-look passes and overhead kicks, as well as his ability to score and create goals, all prominent characteristics of his early-age background playing futsal.</p>
+
+                    <div class="card mt-3">
+                        <div class="card-header d-flex justify-content-between bg-white">
+                            <h4 class="title">Neymar</h4>
+                            <p>2/10</p>
+                        </div>
+                        <img src="https://i.imgur.com/uaM2t7f.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-title"><strong>25.000 Likes</strong></p>
+                            <p class="card-text">Neymar da Silva Santos Júnior (born 5 February 1992), known as Neymar, is a Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team. A prolific goalscorer and renowned playmaker, he is regarded as one of the best players in the world, as well as one of the greatest Brazilian footballers of all time. Neymar has scored at least 100 goals for three different clubs, making him one of four players to achieve this.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3 mb-3">
+                        <div class="card-header d-flex justify-content-between bg-white">
+                            <h4 class="title">Ronaldinho</h4>
+                            <p>4/15</p>
+                        </div>
+                        <img src="https://i.imgur.com/ddBH8Yl.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-title"><strong>20.000 Likes</strong></p>
+                            <p class="card-text">Ronaldo de Assis Moreira (born 21 March 1980), commonly known as Ronaldinho Gaúcho or simply Ronaldinho, is a Brazilian retired professional footballer who played mostly as an attacking midfielder, but was also deployed as a winger. Widely regarded as one of the greatest players of all time, Ronaldinho won two FIFA World Player of the Year awards and a Ballon d'Or. A global icon of the sport, he was renowned for his technical skills, creativity, dribbling ability and accuracy from free-kicks, his use of tricks, feints, no-look passes and overhead kicks, as well as his ability to score and create goals, all prominent characteristics of his early-age background playing futsal.</p>
+                        </div>
                     </div>
                 </div>
             </div>
